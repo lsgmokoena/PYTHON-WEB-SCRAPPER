@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Amamzon Shipping Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding-bottom: 110px;
+        }
+
+        .css-subscribe-button {
+            border: none;
+            background-color: black;
+            color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-bottom: 30px;
+
+        }
+
+        .is-subs {
+            background-color: rgb(240, 240, 240);
+            color: red;
+        }
+
+        .css-input {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 15px;
+      }
+
+         /* The code for the apperance of the Calculate button
+        */
+        .css-calculate {
+        background-color: green;
+        color: white;
+        border: none;
+
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      /* The code for the apperance of the Clear button
+      */
+      .css-clear {
+        background-color: blue;
+        color: white;
+        border: none;
+
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        font-size: 15px;
+        cursor: pointer;
+      }
+    </style>
+
+
+</head>
+
+<body>
+
+    <p>YouTube Subscribe</p>
+
+    <button class="js-subscribe-button css-subscribe-button" onclick="
+        changeSubscribeButton();
+    ">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+
+    <input class="js-input css-input" placeholder="cost of order">
+
+    <button onclick="
+        calculate();
+    " class="js-calculate css-calculate">Calculate</button>
+
+    <button onclick="
+        document.querySelector('.js-result').innerHTML = '';
+    " class="css-clear">Clear</button>
+
+    <p class="js-result css-result"></p>
+
+    <script>
+
+
+        function changeSubscribeButton() {
+            buttonElement = document.querySelector('.js-subscribe-button');
+            if (buttonElement.innerHTML === 'Subscribe') {
+                buttonElement.innerHTML = 'Subscribed';
+                buttonElement.classList.add('is-subs');
+            } else {
+                buttonElement.innerHTML = 'Subscribe';
+                buttonElement.classList.remove('is-subs')
+            }
+        }
+
+
+
+        function calculate() {
+            const inputElement = document.querySelector('.js-input');
+            let cost = Number(inputElement.value);
+            console.log(cost);
+            if (cost <= 50) {
+                cost = cost + 10;
+            } else if (cost > 50) {
+                cost = cost;
+            }
+            document.querySelector('.js-result').innerHTML = 'Cost of Order: R' + cost;
+
+            console.log(cost);
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+
+</html>

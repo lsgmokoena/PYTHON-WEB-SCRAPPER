@@ -1,0 +1,11 @@
+Quote,Author,Tags,Sentiment,Score
+“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”,Albert Einstein,"change, deep-thoughts, thinking, world",Neutral,0.0
+"“It is our choices, Harry, that show what we truly are, far more than our abilities.”",J.K. Rowling,"abilities, choices",Positive,0.3
+“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”,Albert Einstein,"inspirational, life, live, miracle, miracles",Positive,0.0037878787878787845
+"“The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.”",Jane Austen,"aliteracy, books, classic, humor",Negative,-0.04999999999999999
+"“Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.”",Marilyn Monroe,"be-yourself, inspirational",Negative,-0.27777777777777773
+“Try not to become a man of success. Rather become a man of value.”,Albert Einstein,"adulthood, success, value",Positive,0.3
+“It is better to be hated for what you are than to be loved for what you are not.”,André Gide,"life, love",Positive,0.09999999999999998
+"“I have not failed. I've just found 10,000 ways that won't work.”",Thomas A. Edison,"edison, failure, inspirational, paraphrased",Positive,0.25
+“A woman is like a tea bag; you never know how strong it is until it's in hot water.”,Eleanor Roosevelt,misattributed-eleanor-roosevelt,Positive,0.3416666666666667
+"“A day without sunshine is like, you know, night.”",Steve Martin,"humor, obvious, simile",Neutral,0.0

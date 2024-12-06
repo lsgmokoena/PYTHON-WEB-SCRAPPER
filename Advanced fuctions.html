@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Advanced Functions</title>
+
+
+
+</head>
+
+<body>
+
+    <script>
+        // Using functions inside the object
+        const object1 = {
+            num: 2,
+            fun: function (param) {
+                console.log(param);
+
+            }
+        }
+
+        object1.fun('Hello World');
+
+        //Using a function inside a function
+        function fun1(param){
+            param();
+        }
+
+        //Called a function below, the parameter is a function which contains a console.log
+        fun1(function()
+            {
+                console.log('Hello World Function')
+            }
+        )
+
+            // Set timeout functions is javascript built functions that allows us to call a function and d
+            //display ut after a certain seconds
+            //The functions takes two parameters a function that we will use and the miliseconds for when we will use it.
+        setTimeout(function(){
+            console.log('Timeout');
+        }, 3000)
+
+        console.log('next Line');
+
+        // set interval functions is also a built in javascript functions that allows for function to run
+        // every after a certain miliseconds in the future.
+        // A syncronous code setInterval() and setTimeouts()
+        setInterval(function() {
+            console.log('Interval');
+        }, 3000);
+
+        //for each method to loop an array using a function
+        [
+            'Make dinner',
+            'Sleep',
+            'Code'
+        ]
+        .forEach((value,index) =>{
+            console.log(index);
+            console.log(value);
+        })
+
+
+        //an arrow function works same way as regular function
+        const arrowfunction = () => {
+            console.log('Hello World');
+        }
+        // calling a function
+        arrowfunction();
+
+
+
+    </script>
+</body>
+
+
+</html>

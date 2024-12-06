@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> CSS HTML JAVASCRPIT</title>
+
+    <style>
+        /* Styling the html elements and body.
+        */
+        /*The body element font code
+        */
+        body {
+            font-family: Arial;
+            padding-bottom: 110px;
+        }
+
+        /*The text box input code style
+        */
+        .cost-input {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 15px;
+      }
+
+      /* The buttons apperance code
+      */
+
+        .subscribe-button {
+            border: none;
+            background-color: black;
+            color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+        /* The code for when the Subscribe button is pressed to change the apperance
+        */
+        .is-subs {
+            background-color: rgb(240, 240, 240);
+            color: black
+        }
+
+        /* The code for the apperance of the Calculate button
+        */
+        .calculate-button {
+        background-color: green;
+        color: white;
+        border: none;
+
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      /* The code for the apperance of the Clear button
+      */
+      .clear-button {
+        background-color: blue;
+        color: white;
+        border: none;
+
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+
+    </style>
+
+</head>
+
+<body>
+    <P>YouTube Subscribe Button</P>
+
+    
+    <button onclick="
+        subscribe();
+       " class="js-subscribe-button subscribe-button">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+
+    <input class="js-input cost-input" onkeydown="
+        console.log('typing...')
+        if(event.key==='Enter'){
+            calcShipping();
+        }
+    " placeholder="cost of order">
+
+    <button class="calculate-button" onclick="
+        calcShipping();
+    ">Calculate</button>
+
+    <button class="clear-button" onclick="
+        document.querySelector('.js-result').innerHTML = '';
+    ">Clear</button>
+
+    <p class="js-result"></p>
+
+
+    <script>
+
+        function subscribe() {
+            buttonElement = document.querySelector('.js-subscribe-button');
+            if (buttonElement.innerHTML === 'Subscribe') {
+                buttonElement.innerHTML = 'Subscribed';
+                buttonElement.classList.add('is-subs');
+            } else {
+                buttonElement.innerHTML = 'Subscribe';
+                buttonElement.classList.remove('is-subs')
+            }
+        }
+
+        function calcShipping() {
+            const inputElement = document.querySelector('.js-input')
+            let cost = Number(inputElement.value);
+
+            if (cost < 50) {
+                cost = cost + 10;
+            } else if (cost >= 50) {
+                cost = cost;
+            }
+
+            console.log(cost);
+
+            document.querySelector('.js-result').innerHTML = 'Total Cost of Order: R' + cost;
+
+
+        }
+
+    </script>
+</body>
+
+
+</html>

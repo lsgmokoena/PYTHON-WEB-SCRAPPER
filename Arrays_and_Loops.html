@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> TO DO LIST Practice</title>
+
+
+
+</head>
+
+<body>
+    <p>Todo List 1 for Console</p>
+    <input onkeydown="
+        if(event==='Enter'){
+            addTodo();
+        }
+        " placeholder="Todo name" class="js-input-name">
+    <button onclick="
+        addTodo();
+        ">Add</button>
+
+    <p>Todo List 2 for HTML Output</p>
+        <input onkeydown="
+        if(event==='Enter'){
+          addTodo();
+        }
+        " placeholder="Todo name" class="js-input-name">
+        <button onclick="
+            addTodo2();
+        ">Add</button>
+
+        
+        <dev class="js-todoList"> </dev>
+
+    <script src="scripts/todo-list.js">
+    </script>
+</body>
+
+
+</html>

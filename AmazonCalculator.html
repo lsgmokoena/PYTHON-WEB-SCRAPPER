@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Amazon Shipping Calculator</title>
+
+</head>
+
+<body>
+    <p> YouTube Subscribe Button </p>
+    <button onclick="
+        subscribe();
+    " class="js-subscribe-button">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+
+    <input onkeydown="
+    console.log('typing...')
+    if(event.key === 'Enter'){
+        calcShipping();
+    }
+    " placeholder="cost of order" class="js-cost-input" >
+
+    <button onclick="
+        calcShipping();
+    " >Calculator</button>
+
+    <p class="js-cost-result"></p>
+
+
+
+    <script>
+
+        function calcShipping(){
+            const inputElement = document.querySelector('.js-cost-input');
+            let cost = Number(inputElement.value);
+            
+            if(cost < 50){
+                cost = cost + 10;
+            }else{
+                cost = cost
+            }
+            
+            console.log(cost);
+            document.querySelector('.js-cost-result')
+                .innerHTML = 'Cost : $' + cost;
+        }
+
+        function subscribe() {
+            const buttonElement = document.querySelector('.js-subscribe-button');
+
+            if (buttonElement.innerText === 'Subscribe') {
+                buttonElement.innerText = 'Subscribed';
+            } else {
+                buttonElement.innerText = 'Subscribe';
+            }
+
+        }
+
+    </script>
+</body>
+
+
+</html>
